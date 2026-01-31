@@ -1,22 +1,20 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Selvi Hacm</title>
+    <title>Selvh hack App</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body onclick="playWelcome()">
 
     <div id="web-container">
         <iframe src="https://www.dmwin1.com/#/register?invitationCode=27278184971" id="myIframe"></iframe>
         
-        <button id="batchTrigger" onclick="startBatchFlow()"></button>
-    </div>
+        <button id="loginTrigger" onclick="handleLogin()"></button>
 
-    <div id="auth-overlay">
-        <button id="loginBtn">Login</button>
-        <button id="registerBtn">Register</button>
+        <button id="batchTrigger" onclick="handleBatch()"></button>
     </div>
 
     <audio id="bypassAudio" src="bypass.mp3"></audio>
