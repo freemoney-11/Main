@@ -1,16 +1,39 @@
-body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; }
-#wrapper { position: relative; width: 100%; height: 100%; }
-iframe { width: 100%; height: 100%; border: none; }
+body, html  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-/* Isko website ke Register button ke upar adjust kar */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Faltu ka scroll hatane ke liye */
+    background-color: #000;
+}
+
+#wrapper {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+/* Register Overlay Button */
 #registerOverlay {
     position: absolute;
-    bottom: 15%; /* Screen ke niche se 15% upar */
-    left: 10%;
-    width: 80%; /* Button ki width */
-    height: 60px;
-    background: blue; 
-    opacity: 0; /* Isko 0.5 karke check kar lena pehle sahi jagah hai ya nahi */
+    bottom: 12%; /* Isko apne button ke hisab se upar-neeche kar lena */
+    left: 5%;
+    width: 90%;
+    height: 70px;
+    background: rgba(255, 0, 0, 0); /* Poora invisible */
     z-index: 999;
     cursor: pointer;
 }
