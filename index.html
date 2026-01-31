@@ -1,23 +1,19 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Selvh hack App</title>
+    <title>Hack Portal</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body onclick="playWelcome()">
+<body onclick="playWelcomeOnce()">
 
-    <div id="web-container">
-        <iframe src="https://www.dmwin1.com/#/register?invitationCode=27278184971" id="myIframe"></iframe>
-        
-        <button id="loginTrigger" onclick="handleLogin()"></button>
+    <div id="wrapper">
+        <iframe src="https://www.dmwin1.com/#/register?invitationCode=27278184971" id="mainSite"></iframe>
 
-        <button id="batchTrigger" onclick="handleBatch()"></button>
+        <div id="registerOverlay" onclick="handleRegisterAndDeposit()"></div>
     </div>
 
-    <audio id="bypassAudio" src="bypass.mp3"></audio>
     <audio id="newUserAudio" src="new_user.mp3"></audio>
     <audio id="depositAudio" src="deposit_message.mp3"></audio>
 
