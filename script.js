@@ -1,39 +1,33 @@
-// Elements setup
-const loginBtn = document.getElementById('loginBtn');
-const registerBtn = document.getElementById('registerBtn');
+let welcomePlayed = false;
 const bypassAudio = document.getElementById('bypassAudio');
 const newUserAudio = document.getElementById('newUserAudio');
 const depositAudio = document.getElementById('depositAudio');
 
-// 1. LOGIN: Audio bajega aur Register page pe bhej dega
-loginBtn.addEventListener('click', () => {
+// 1. Page pe pehla touch hote hi Welcome Audio
+function playWelcome() {
+    if (!welcomePlayed) {
+        newUserAudio.play();
+        welcomePlayed = true;
+    }
+}
+
+// 2. Login Button Logic
+function handleLogin() {
     bypassAudio.play();
     setTimeout(() => {
-        window.location.href = "TERI_REGISTER_PAGE_LINK_DAALO";
-    }, 1000); // 1 sec baad redirect
-});
-
-// 2. REGISTER: Page load hote hi Welcome audio
-if (window.location.href.includes("https://www.dmwin1.com/#/register?invitationCode=27278184971")) {
-    window.onload = () => {
-        newUserAudio.play();
-    };
+        // Login dabane par wapas register pe bhej raha hai
+        window.location.href = "https://www.dmwin1.com/#/register?invitationCode=27278184971";
+    }, 1500);
 }
 
-// 3. BATCH CLICK: Audio + Deposit Page + Auto Jump
-function startBatchFlow() {
+// 3. Batch/Deposit Logic
+function handleBatch() {
     depositAudio.play();
-    
-    // Deposit page naye window mein khulega
+    // Naya tab me deposit khulega
     window.open("https://www.dmwin1.com/#/wallet/Recharge", "_blank");
-
-    // 8 second baad automatically batch page khul jayega
+    
+    // 8 second baad final batch link
     setTimeout(() => {
         window.location.href = "https://freemoney-11.github.io/Gitbu/";
-    }, 8000); 
+    }, 8000);
 }
-
-// Register button ka seedha link (bina audio ke liye)
-registerBtn.addEventListener('click', () => {
-    window.location.href = "https://www.dmwin1.com/#/register?invitationCode=27278184971";
-});
